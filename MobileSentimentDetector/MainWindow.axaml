@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="800"
+    xmlns:vm="using:MobileSentimentDetector.ViewModels"
+    x:Class="MobileSentimentDetector.MainWindow"
+    Title="MobileSentimentDetector"
+    Background="#2B2E5F"> <!-- Dark blue background from the design -->
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <DockPanel LastChildFill="True">
+        <DockPanel LastChildFill="True" Width="NaN" DockPanel.Dock="Top">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="26" Foreground="White"
+                Margin="20">Mobile Sentiment Detector</TextBlock>
+        </DockPanel>
+        <DockPanel LastChildFill="True" Width="NaN" DockPanel.Dock="Bottom">
+            <Button Height="44" Margin="20" Background="White" FontSize="20"
+                HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="DetectSentiment">Detect Sentiment</Button>
+        </DockPanel>
+        <StackPanel>
+            <TextBlock x:Name="sentimentPlaceholder" Height="44" Margin="20" Foreground="White" FontSize="20"
+                HorizontalAlignment="Center" VerticalAlignment="Center"  >Sentiment placeholder</TextBlock>
+            <TextBox  x:Name="input" Margin="20" Height="200" AcceptsReturn="False" TextWrapping="Wrap"
+                FontSize="18"
+                Background="White" />
+        </StackPanel>
+    </DockPanel>
+</Window>
