@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Name=MobSentDec
+Exec=/usr/local/bin/MobileSentimentDetector/MobileSentimentDetector
+Type=Application
+Terminal=false

@@ -46,7 +46,6 @@ archive:
 	cd $(PUBLISH_FOLDER) && rm -f ../$(ARCHIVE_NAME) | tar -czvf ../$(ARCHIVE_NAME) ./*
 
 install-local:
-	scp $(ARCHIVE_NAME) $(SSH_DESTINATION):~/$(ARCHIVE_NAME)
 	ssh -t $(SSH_DESTINATION) '(rm -rf $(TARGET_FOLDER) 2>/dev/null || true) && sudo mkdir $(TARGET_FOLDER) && cd $(TARGET_FOLDER) && sudo mv ~/$(ARCHIVE_NAME) ../$(ARCHIVE_NAME) && sudo tar -xzvf ../$(ARCHIVE_NAME) && sudo rm -rf ../$(ARCHIVE_NAME) && sudo chmod +x $(PROJECT_NAME) && sudo mv $(PROJECT_NAME).desktop /usr/share/applications/'
 
 publish-local: publish archive install-local
