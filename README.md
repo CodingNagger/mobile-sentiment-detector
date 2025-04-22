@@ -1,6 +1,10 @@
-## Mobile Sentiment Detector
+# Mobile Sentiment Detector
 
-### Command to export model
+## Blog post link
+
+https://www.codingnagger.com/2025/04/22/entering-the-world-of-machine-learning-through-practice/
+
+## Command to export model
 
 ```powershell
 docker run -it --rm -v ${PWD}/exported_model:/app/exported_model optimum-cli-exporter
