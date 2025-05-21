@@ -1,7 +1,2 @@
-bin/
-obj/
-exported_model/
-MobileSentimentDetector/Model/Assets/*
-!MobileSentimentDetector/Model/Assets/.gitkeep
-publish/
-*.tar.gz
+.DS_Store
+xcuserdata/
